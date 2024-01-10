@@ -71,8 +71,11 @@ It is a orchestration tools:
    INSTALLETION :
 
    OS : Linux needed (3.11 tak RHEL mendotry, after that REDHAT created Minimal core os, this is lightweight, it is only using only container technolofy footprint)
+
        REDHAT-COREOS ( CRI-O + Kublet + kubeproxy) for master and worker node both
+
    insalletion modes :
-    upi: user provisioned infrastructor
-         all things done like machine create , installetion etc all.
+
+   upi: user provisioned infrastructor    -- --     all things done like machine create , installetion etc all.
+
     ipi: Intaller provsion infra : jo manual installetion nahi kar sakte vo bas installetion directoly script se karte he. it is complet automation
