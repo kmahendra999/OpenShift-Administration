@@ -72,7 +72,7 @@ It is a orchestration tools:
 
    OS : Linux needed (3.11 tak RHEL mendotry, after that REDHAT created Minimal core os, this is lightweight, it is only using only container technolofy footprint)
 
-       REDHAT-COREOS ( CRI-O + Kublet + kubeproxy) for master and worker node both
+        REDHAT-COREOS ( CRI-O + Kublet + kubeproxy) for master and worker node both
 
    insalletion modes :
 
