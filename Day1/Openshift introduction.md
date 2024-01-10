@@ -41,7 +41,38 @@ It is a orchestration tools:
 
            Custom Scheduling -  we will decide where pods will go
 
-       e.) Openshift Controller - Once we deploy the application uski desired state ko current state se match karte rahna, Jese kisi application ke 4 containers he is desired state. and current running state like ek container down ho gaya. to to ye information api ko update karna controller ka kam he. **So current state ko desired state se match karte rahna this is the job of controller.**
+       e.) Openshift Controller - Once we deploy the application uski desired state ko current state se match karte rahna,
+           Jese kisi application ke 4 containers he is desired state. and current running state like ek container down ho gaya.
+           to to ye information api ko update karna controller ka kam he.
+           **So current state ko desired state se match karte rahna this is the job of controller.**
    
-3. Worker nodes :
+3. Worker nodes : So the Worker nodes ek machine he jiske upar we are deploying our application / containers.
 
+   Compoents :
+
+            a.) Container Runtime : jo container technology ko kernel me lekar aa raha he. Without runtime we can't use contanerization.
+
+                                    Openshift me runtime is **cri-O**
+
+                                    Now in daily , redhat ke har node par crio nam ki service dalni padegi.
+
+                                    redhat ke 3.11 tak redhat was using containerd which is from docker community.
+
+                                    But now it have 4.x se containerd is not available now and on each worker node redhat now using crio.
+
+                                    crio ke sath ek service aur hoti he, **kubelet** : it is the agent of API server which understand api instructiuons and give to cri-o.
+
+                                    koi bhi instruction pahle kubelet(api ka agent) ko jata he fir cri-o ke pas jata he.
+
+            b.) **kubelet** : it is the agent of API server which understand api instructiuons and give to cri-o.
+
+            c.) kube-proxy : it is used for networking
+
+   INSTALLETION :
+
+   OS : Linux needed (3.11 tak RHEL mendotry, after that REDHAT created Minimal core os, this is lightweight, it is only using only container technolofy footprint)
+       REDHAT-COREOS ( CRI-O + Kublet + kubeproxy) for master and worker node both
+   insalletion modes :
+    upi: user provisioned infrastructor
+         all things done like machine create , installetion etc all.
+    ipi: Intaller provsion infra : jo manual installetion nahi kar sakte vo bas installetion directoly script se karte he. it is complet automation
