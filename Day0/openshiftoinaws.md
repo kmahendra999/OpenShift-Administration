@@ -1,4 +1,4 @@
-Refrence :
+<pre>Refrence :
 https://docs.openshift.com/container-platform/4.10/installing/installing_aws/installing-aws-default.html
 
 
@@ -190,5 +190,5 @@ ipi method
 register domainname.com
 example.com
 in domain control panel
-
+</pre>
 
